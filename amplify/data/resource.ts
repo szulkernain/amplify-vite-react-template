@@ -12,7 +12,7 @@ const schema = a.schema({
       content: a.string(),
     })
     .authorization(allow => [
-      allow.publicApiKey().to(['read']),
+      allow.authenticated().to(['read']),
       allow.owner(),
     ]),
 });
