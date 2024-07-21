@@ -11,7 +11,10 @@ const schema = a.schema({
     .model({
       content: a.string(),
     })
-    .authorization((allow) => [allow.publicApiKey()]),
+    .authorization((allow) => [
+      allow.publicApiKey().to(['read']),
+      allow.owner(),
+    ]),
 });
 
 export type Schema = ClientSchema<typeof schema>;
