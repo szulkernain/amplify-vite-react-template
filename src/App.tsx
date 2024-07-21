@@ -26,22 +26,22 @@ function App() {
   return (
 
     <Authenticator>
-      {({ signOut }) => (
+      {({ signOut, user }) => (
         <main>
           <h1>Real Time Dashboard</h1>
-          <button onClick={createTodo}>+ new</button>
+          <button onClick={createTodo}>+ Add a Task</button>
           <ul>
             {todos.map((todo) => (
               <li
                 onClick={() => deleteTodo(todo.id)}
-                key={todo.id}>{todo.content}</li>
+                key={todo.id}>{todo.content}, created by {user?.signInDetails?.loginId}</li>
             ))}
           </ul>
           <div>
             🥳 Trying something fun! Click on any task above to delete!
           </div>
 
-          <button onClick={signOut}>Sign out</button>
+          <button onClick={signOut}>Sign out {user?.signInDetails?.loginId}</button>
 
         </main>
       )}
