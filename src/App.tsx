@@ -45,7 +45,7 @@ function App() {
             </a>
           </div>
 
-          <button onClick={signOut}></button>
+          <button onClick={signOut}>Sign out</button>
 
         </main>
       )}
