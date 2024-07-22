@@ -12,7 +12,7 @@ const schema = a.schema({
       content: a.string(),
     })
     .authorization(allow => [
-      allow.authenticated().to(["read"]),
+      allow.authenticated('identityPool').to(["read"]),
       allow.owner()
     ]),
 });
