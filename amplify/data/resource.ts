@@ -13,7 +13,7 @@ const schema = a.schema({
     })
     .authorization(allow => [
       allow.guest().to(["read"]),
-      allow.owner()
+      allow.owner('userPool')
     ]),
 });
 
