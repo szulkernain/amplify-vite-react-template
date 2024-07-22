@@ -17,15 +17,13 @@ function App() {
 
   function createTodo() {
     client.models.Todo.create(
-      { content: window.prompt("Todo content") },
-      { authMode: 'userPool'}
+      { content: window.prompt("Todo content") }
     );
   }
 
   function deleteTodo(id: string) {
     client.models.Todo.delete(
-      { id },
-      { authMode: 'userPool'}
+      { id }
     )
   }
 
