@@ -37,7 +37,7 @@ function App() {
           <ul>
             {todos.map((todo) => (
               <li
-                key={todo.id}>{todo.content}, created by {todo.owner}
+                key={todo.id}>{todo.content}
                 <button onClick={() => deleteTodo(todo.id)}>Delete Task</button>
               </li>
             ))}
