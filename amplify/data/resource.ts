@@ -12,8 +12,8 @@ const schema = a.schema({
       content: a.string(),
     })
     .authorization(allow => [
-      allow.guest().to(['read']),
-      allow.owner(),
+      allow.authenticated().to(["read"]),
+      allow.owner()
     ]),
 });
 
