@@ -39,8 +39,8 @@ function App() {
               <li
                 key={todo.id}
                 onClick={() => deleteTodo(todo.id)}>
-                  {todo.content}
-                </li>
+                {todo.content}
+              </li>
             ))}
           </ul>
           <div>
