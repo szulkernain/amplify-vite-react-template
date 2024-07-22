@@ -34,8 +34,8 @@ function App() {
             {todos.map((todo) => (
               <li
                 key={todo.id}>{todo.content}, created by {user?.signInDetails?.loginId}
+                <button onClick={() => deleteTodo(todo.id)}>Delete Task</button>
               </li>
-              <button onClick={() => deleteTodo(todo.id)}>Delete Task</button>
             ))}
           </ul>
           <div>
