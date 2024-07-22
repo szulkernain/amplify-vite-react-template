@@ -43,7 +43,7 @@ function App() {
             ))}
           </ul>
           <div>
-            🥳 Trying something fun! Click on any task above to delete!
+            🥳 Trying something fun!
           </div>
 
           <button onClick={signOut}>Sign out {user?.signInDetails?.loginId}</button>
